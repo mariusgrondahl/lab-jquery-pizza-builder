@@ -1,80 +1,87 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Pizza Builder</title>
+    <title>Pepe`s Pizza</title>
     <link rel="stylesheet" href="pizza.css">
   </head>
 
   <body>
     <!-- Begin Header -->
     <header>
-      <h1>Pizza Builder</h1>
-      <p class="description">Build your own HTML and CSS pizza.</p>
+      <h1>Guisepppes Pizza</h1>
     </header>
     <!-- End Header -->
 
     <!-- Controls -->
     <div class="panel controls">
+      <h3>Pick ingredients</h3>
       <ul>
         <li>
           <button class="btn btn-pepperonni active">Pepperonni</button>
         </li>
         <li>
-          <button class="btn btn-mushrooms active">Mushrooms</button>
+          <button class="btn btn-mushrooms active"">Mushrooms</button>
         </li>
         <li>
-          <button class="btn btn-green-peppers active">Green peppers</button>
+          <button class="btn btn-green-peppers active"">Green peppers</button>
         </li>
         <li>
-          <button class="btn btn-sauce active">White sauce</button>
+          <button class="btn btn-sauce">White sauce</button>
         </li>
         <li>
-          <button class="btn btn-crust active">Gluten-free crust</button>
+          <button class="btn btn-crust">Gluten-free crust</button>
         </li>
       </ul>
+      <h3>Total: <span>11</span><span> $</span></h3>
+
     </div>
     <!-- End Controls -->
 
-    <!-- Price -->
+    <!-- Price 
+      
     <aside class="panel price">
       <h2>Your pizza's price</h2>
 
-      <b>$10 cheese pizza</b>
-      <ul>
-        <li>$1 pepperonni</li>
-        <li>$1 mushrooms</li>
-        <li>$1 green peppers</li>
-        <li>$3 white sauce</li>
-        <li>$5 gluten-free crust</li>
+      <h3><span>$</span><span id="start-price" value="10">10 </span>cheese pizza</b></h3>
+      <ul id="price-list">
+        <li id="pepperoni-list" class="active" value="1">$1 pepperonni</li>
+        <li id="mushroom-list" class="active" value="1">$1 mushrooms</li>
+        <li id="green-pepper-list" class="active" value="1">$1 green peppers</li>
+        <li id="white-sauce-list" class="active" value="3">$3 white sauce</li>
+        <li id="glutenfree-list" class="active" value="5">$5 gluten-free crust</li>
       </ul>
-      <strong>$21</strong>
+      <h3><span id="price"><strong>$21</strong></span></h3>
     </aside>
-    <!-- End Price -->
+    
+    End Price -->
 
     <!-- Begin Pizza -->
     <div id="pizza">
-      <section class="green-pepper one"></section>
-      <section class="green-pepper two"></section>
-      <section class="green-pepper three"></section>
-      <section class="green-pepper four"></section>
-      <section class="green-pepper five"></section>
-      <section class="green-pepper six"></section>
-      <section class="green-pepper seven"></section>
-      <section class="green-pepper eight"></section>
-      <section class="green-pepper nine"></section>
-      <section class="green-pepper ten"></section>
-      <section class="green-pepper eleven"></section>
-      <section class="green-pepper twelve"></section>
-      <section class="green-pepper thirteen"></section>
-      <section class="green-pepper fourteen"></section>
-      <section class="green-pepper fifteen"></section>
-      <section class="green-pepper sixteen"></section>
-      <section class="green-pepper seventeen"></section>
-      <section class="green-pepper eightteen"></section>
-      <section class="green-pepper nineteen"></section>
-      <section class="green-pepper twenty"></section>
-      <section class="green-pepper twenty-one"></section>
+      <div id="green-pepper">
+        <section class="green-pepper one"></section>
+        <section class="green-pepper two"></section>
+        <section class="green-pepper three"></section>
+        <section class="green-pepper four"></section>
+        <section class="green-pepper five"></section>
+        <section class="green-pepper six"></section>
+        <section class="green-pepper seven"></section>
+        <section class="green-pepper eight"></section>
+        <section class="green-pepper nine"></section>
+        <section class="green-pepper ten"></section>
+        <section class="green-pepper eleven"></section>
+        <section class="green-pepper twelve"></section>
+        <section class="green-pepper thirteen"></section>
+        <section class="green-pepper fourteen"></section>
+        <section class="green-pepper fifteen"></section>
+        <section class="green-pepper sixteen"></section>
+        <section class="green-pepper seventeen"></section>
+        <section class="green-pepper eightteen"></section>
+        <section class="green-pepper nineteen"></section>
+        <section class="green-pepper twenty"></section>
+        <section class="green-pepper twenty-one"></section>
+      </div>
 
+      <div id="mushrooms">
       <section class="mushroom one">
         <div class="cap">1</div>
         <div class="stem"></div>
@@ -234,44 +241,49 @@
         <div class="cap">31</div>
         <div class="stem"></div>
       </section>
+    </div>
 
-      <section class="pep one">1</section>
-      <section class="pep two">2</section>
-      <section class="pep three">3</section>
-      <section class="pep four">4</section>
-      <section class="pep five">5</section>
-      <section class="pep six">6</section>
-      <section class="pep seven">7</section>
-      <section class="pep eight">8</section>
-      <section class="pep nine">9</section>
-      <section class="pep ten">10</section>
-      <section class="pep eleven">11</section>
-      <section class="pep twelve">12</section>
-      <section class="pep thirteen">13</section>
-      <section class="pep fourteen">14</section>
-      <section class="pep fifteen">15</section>
-      <section class="pep sixteen">16</section>
-      <section class="pep seventeen">17</section>
-      <section class="pep eightteen">18</section>
-      <section class="pep nineteen">19</section>
-      <section class="pep twenty">20</section>
-      <section class="pep twenty-one">21</section>
-      <section class="pep twenty-two">22</section>
-      <section class="pep twenty-three">23</section>
-      <section class="pep twenty-four">24</section>
-      <section class="pep twenty-five">25</section>
-      <section class="pep twenty-six">26</section>
-      <section class="pep twenty-seven">27</section>
-      <section class="pep twenty-eight">28</section>
-      <section class="pep twenty-nine">29</section>
-      <section class="pep thirty">30</section>
-      <section class="pep thirty-one">31</section>
-      <section class="pep thirty-three">33</section>
-
-      <section class="crust crust-gluten-free">
+      <div id="pepperoni">
+        <section class="pep one">1</section>
+        <section class="pep two">2</section>
+        <section class="pep three">3</section>
+        <section class="pep four">4</section>
+        <section class="pep five">5</section>
+        <section class="pep six">6</section>
+        <section class="pep seven">7</section>
+        <section class="pep eight">8</section>
+        <section class="pep nine">9</section>
+        <section class="pep ten">10</section>
+        <section class="pep eleven">11</section>
+        <section class="pep twelve">12</section>
+        <section class="pep thirteen">13</section>
+        <section class="pep fourteen">14</section>
+        <section class="pep fifteen">15</section>
+        <section class="pep sixteen">16</section>
+        <section class="pep seventeen">17</section>
+        <section class="pep eightteen">18</section>
+        <section class="pep nineteen">19</section>
+        <section class="pep twenty">20</section>
+        <section class="pep twenty-one">21</section>
+        <section class="pep twenty-two">22</section>
+        <section class="pep twenty-three">23</section>
+        <section class="pep twenty-four">24</section>
+        <section class="pep twenty-five">25</section>
+        <section class="pep twenty-six">26</section>
+        <section class="pep twenty-seven">27</section>
+        <section class="pep twenty-eight">28</section>
+        <section class="pep twenty-nine">29</section>
+        <section class="pep thirty">30</section>
+        <section class="pep thirty-one">31</section>
+        <section class="pep thirty-three">33</section>
+    </div>
+    <div id="crust">
+      <section class="crust ">
         <section class="cheese"></section>
-        <section class="sauce sauce-white"></section>
+        <section class="sauce"></section>
       </section>
+
+    </div>
     </div>
     <!-- End Pizza -->
 
@@ -281,11 +293,6 @@
 
     <!-- Footer -->
     <footer>
-      <p>
-        This pizza educational experience<br />
-        brought to you by
-        <a href="http://ironhack.com" target="_blank">Ironhack</a>.
-      </p>
     </footer>
     <!-- Footer -->
 

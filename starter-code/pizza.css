@@ -25,7 +25,12 @@ header, section, footer, article, details {
 body {
     line-height: 1;
     color: black;
-    background: white;
+
+    background: url(back.jpg) no-repeat center center; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 ol, ul {
@@ -56,53 +61,29 @@ header, nav, details, section, aside, footer {
     display: block;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Quattrocento:400,700&display=swap');
+
+h1{
+    font-size: 1.5rem;
+    margin: 2rem;
+    font-family: 'Quattrocento', serif;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+h1, h2, h3, h4, h5{
+    font-family: 'Quattrocento', serif;
+    font-weight: bold;
+}
+
 body {
-    font-family: 'Courier', 'Courier New', Serif;
+    font-family: 'open sans', Arial, Helvetica, sans-serif;
     max-width: 750px;
     margin: 0 auto;
 }
 
-/*
- * Buttons from:
- * http://codepen.io/TeshaR/pen/cdugG?editors=110
- */
-.btn {
-  float: left;
-  position: relative;
-  top: 0;
-  cursor: pointer;
-  border: none;
-  border-radius: 3px;
-  margin: 0 7px 11px 0;
-  padding: 0 20px;
-  text-align: center;
-
-  /* Smoothing out hover using css3 transitions, if not, the pressed button effect looks a bit hard */
-  transition: all 0.2s ease;
-
-  /* Size */
-  line-height: 45px;
-  width: 100%;
-  height: 45px;
-  font-size: 120%;
-
-  /* Colors */
-  background: #f7f7f7;
-  box-shadow: 0 6px rgba(0, 0, 0, 0.2);
-  color: #888;
-}
-
-.btn:hover {
-  background: #e6e6e6;
-  box-shadow: 0 5px #aaa;
-  color: #888;
-}
-
-/* Imitate a pressed effect for buttons */
-.btn:active {
-  top: 5px;
-  box-shadow: none;
-}
 
 /*------ Header -----*/
 header {
@@ -110,8 +91,10 @@ header {
 }
 
 h1 {
-    font-size: 70px;
-    color: #444;
+    font-size: 50px;
+    color: #000;
+    font-weight: bold;
+    text-shadow: #063102;
     margin-bottom: 10px
 }
 
@@ -135,11 +118,16 @@ p.description {
 
 .panel {
     position: absolute;
-    top: 100px;
+    top: 170px;
     z-index: 42;
-    padding: 20px;
+    padding: 20px 40px;
     border-radius: 3px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.panel h3{
+    margin-bottom: 15px;
+    text-align: center;
 }
 
 
@@ -148,140 +136,107 @@ p.description {
     left: 0;
 }
 
-.btn-pepperonni {
-  background: #e8103b;
-  box-shadow: 0 6px #890923;
-  color: #fff;
+.btn {
+    position: relative;
+    top: 0;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    margin: 0 7px 11px 0;
+    padding: 0px 25px 0px 55px;
+    text-align: center;
+  
+    /* Smoothing out hover using css3 transitions, if not, the pressed button effect looks a bit hard */
+    transition: all 0.2s ease;
+  
+    /* Size */
+    line-height: 45px;
+    width: 100%;
+    height: 45px;
+    font-size: 1.2rem;
+    right: 20px;
+    /* Colors */
+    background: rgb(112, 148, 40, 0.8);
+    color: #fff;
+  }
+  
+  .btn.active{
+      background: rgb(112, 148, 40, 1);
+      color: #fff;
+      right: 0px;
+  }
+
+  .btn:hover{
+    background: olivedrab;
+  }
+
+.btn-pepperonni:before {
+    display: inline;
+    position: absolute;
+    background: #f6f6f6;
+    color: #2d2d2d;
+    font-weight: bold;
+    content: '1$';
+    left: 0px;
+    padding: 0px 9px;
+    font-size: 1rem;
 }
 
-.btn-pepperonni:hover {
-  background: #c80e33;
-  box-shadow: 0 5px #69071b;
-  color: #fff;
+
+.btn-mushrooms:before{
+    display: inline;
+    position: absolute;
+    background: #f6f6f6;
+    color: #2d2d2d;
+    font-weight: bold;
+    content: '1$';
+    left: 0px;
+    padding: 0px 9px;
+    font-size: 1rem;
+
+}
+  
+.btn-green-peppers:before {
+    display: inline;
+    position: absolute;
+    background: #f6f6f6;
+    color: #2d2d2d;
+    font-weight: bold;
+    content: '1$';
+    left: 0px;
+    padding: 0px 9px;
+    font-size: 1rem;
+
 }
 
-.btn-pepperonni.active {
-  top: 2px;
-  box-shadow: 0 2px #890923;
+.btn-sauce:before {
+    display: inline;
+    position: absolute;
+    background: #f6f6f6;
+    color: #2d2d2d;
+    font-weight: bold;
+    content: '3$';
+    left: 0px;
+    padding: 0px 9px;
+    font-size: 1rem;
+
 }
 
-.btn-pepperonni.active:hover {
-  box-shadow: 0 2px #69071b;
+.btn-crust:before {
+    display: inline;
+    position: absolute;
+    background: #f6f6f6;
+    color: #2d2d2d;
+    font-weight: bold;
+    content: '5$';
+    left: 0px;
+    padding: 0px 9px;
+    font-size: 1rem;
+
+
 }
 
-.btn-pepperonni:active,
-.btn-pepperonni.active:active {
-  top: 5px;
-  box-shadow: none;
-}
 
-.btn-mushrooms {
-  background: #b49989;
-  box-shadow: 0 6px #644d40;
-  color: #fff;
-}
-
-.btn-mushrooms:hover {
-  background: #a78774;
-  box-shadow: 0 5px #503d33;
-  color: #fff;
-}
-
-.btn-mushrooms.active {
-  top: 2px;
-  box-shadow: 0 2px #644d40;
-}
-
-.btn-mushrooms.active:hover {
-  box-shadow: 0 2px #503d33;
-}
-
-.btn-mushrooms:active,
-.btn-mushrooms.active:active {
-  top: 5px;
-  box-shadow: none;
-}
-
-.btn-green-peppers {
-  background: #129306;
-  box-shadow: 0 6px #0a5203;
-  color: #fff;
-}
-
-.btn-green-peppers:hover {
-  background: #0e7205;
-  box-shadow: 0 5px #063102;
-  color: #fff;
-}
-
-.btn-green-peppers.active {
-  top: 2px;
-  box-shadow: 0 2px #0a5203;
-}
-
-.btn-green-peppers.active:hover {
-  box-shadow: 0 2px #063102;
-}
-
-.btn-green-peppers:active,
-.btn-green-peppers.active:active {
-  top: 5px;
-  box-shadow: none;
-}
-
-.btn-sauce {
-  background: #fff4aa;
-  box-shadow: 0 6px #998500;
-  color: #555;
-}
-
-.btn-sauce:hover {
-  background: #fff088;
-  box-shadow: 0 5px #776800;
-  color: #555;
-}
-
-.btn-sauce.active {
-  top: 2px;
-  box-shadow: 0 2px #998500;
-}
-
-.btn-sauce.active:hover {
-  box-shadow: 0 2px #776800;
-}
-
-.btn-sauce:active,
-.btn-sauce.active:active {
-  top: 5px;
-  box-shadow: none;
-}
-
-.btn-crust {
-  background: #e0d5cf;
-  box-shadow: 0 6px #957160;
-  color: #555;
-}
-
-.btn-crust:hover {
-  background: #d3c3bb;
-  box-shadow: 0 5px #816253;
-  color: #555;
-}
-
-.btn-crust.active {
-  top: 2px;
-  box-shadow: 0 2px #957160;
-}
-
-.btn-crust.active:hover {
-  box-shadow: 0 2px #816253;
-}
-
-.btn-crust:active,
-.btn-crust.active:active {
-  top: 5px;
-  box-shadow: none;
-}
 
 /*------ Price -----*/
 .price {
