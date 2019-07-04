@@ -1,53 +1,97 @@
 // Write your Pizza Builder JavaScript in this file.
 $(document).ready(function(){
+    //Hiding elements
     $("#white-sauce-list, #glutenfree-list").hide();
 
+    // Setting the Value of default
+    $(".btn-pepperonni").val(1); $(".btn-mushrooms").val(1); $(".btn-green-peppers").val(1); $(".btn-sauce").val(0); $(".btn-crust").val(0);
 
-    $(".btn").click(function(){
-        let total = 0;
-        
-        total = $("#start-price").val() + $("#pepperoni-list").val() +  $("#mushroom-list").val() + $("#green-pepper-list").val() + $("#white-sauce-list").val() + $("#glutenfree-list").val(); 
-        console.log(total);
+    let sum = 10;
+    function calcSum () {
+    $(".btn").each(function(index) {
+        sum += parseInt($(this).val());
+        $("#price").html(sum);
+    });
+}
 
-        $("#price").html(total)
-    })
 
+// Her we start the Button interaction
 
+// PepperoniButton
     $(".btn-pepperonni").click(function(){
         $("#pepperoni").toggle();
         $(".btn-pepperonni").toggleClass("active");
+        $(".btn-pepperonni").val(1);
 
-        $("#pepperoni-list").toggle("pepperoni-list").toggleClass("show");
-        $("#pepperoni-list").hasClass("show")
+        if ( $(".btn-pepperonni").hasClass("active") ) {
+            $(".btn-pepperonni").val(1);
+        } else {
+            $(".btn-pepperonni").val(0);
+        }
+
+        sum = 10;
+        calcSum();
       });
 
+// MushroomButton
     $(".btn-mushrooms").click(function(){
       $("#mushrooms").toggle();
       $(".btn-mushrooms").toggleClass("active");
-      
-      $(".btn-mushrooms").html("Add Mushrooms")
+      $(".btn-mushrooms").val(1);  
+      if ( $(".btn-mushrooms").hasClass("active") ) {
+        $(".btn-mushrooms").val(1);
+    } else {
+        $(".btn-mushrooms").val(0);
+    }  
 
-      $("#mushroom-list").toggle("mushroom-list");
+    sum = 10;
+    calcSum();
     });
 
+// Green Peppers Button
     $(".btn-green-peppers").click(function(){
         $("#green-pepper").toggle();
         $(".btn-green-peppers").toggleClass("active");
-        $("#green-pepper-list").toggle("green-pepper-list");
+        $(".btn-mushrooms").val(1);
 
+        if ( $(".btn-green-peppers").hasClass("active") ) {
+            $(".btn-green-peppers").val(1);
+        } else {
+            $(".btn-green-peppers").val(0);
+        }  
+
+        sum = 10;
+        calcSum();
     });
 
+// SauceButton
     $(".btn-sauce").click(function(){
         $(".sauce").toggleClass("sauce-white");
         $(".btn-sauce").toggleClass("active");
-        $("#white-sauce-list").toggle("white-sauce-list");
+
+        if ( $(".btn-sauce").hasClass("active") ) {
+            $(".btn-sauce").val(3);
+        } else {
+            $(".btn-sauce").val(0);
+        }  
+
+        sum = 10;
+        calcSum();
     });
 
+// CrustButton
     $(".btn-crust").click(function(){
         $(".crust").toggleClass("crust-gluten-free");
         $(".btn-crust").toggleClass("active");
-        $("#glutenfree-list").toggle("glutenfree-list");
-        $("#glutenfree-list").val();
+
+        if ( $(".btn-crust").hasClass("active") ) {
+            $(".btn-crust").val(5);
+        } else {
+            $(".btn-crust").val(0);
+        }     
+        
+        sum = 10;
+        calcSum();
     });
 
 });
